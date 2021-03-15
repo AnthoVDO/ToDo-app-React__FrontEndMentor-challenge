@@ -1,0 +1,26 @@
+.App {
+    display: table;
+    margin: 0 auto;
+    background-image: url(../assets/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    background-color: $color-dark-1;
+    max-width: 1440px;
+}
+
+.app__lightMode {
+    background-image: url(../assets/bg-desktop-light.jpg) !important;
+    background-color: $color-light-1;
+}
+
+@media(max-width: 375px) {
+    .App {
+        background-image: url(../assets/bg-mobile-dark.jpg);
+    }
+    .app__lightMode {
+        background-image: url(../assets/bg-mobile-light.jpg) !important
+    }
+}

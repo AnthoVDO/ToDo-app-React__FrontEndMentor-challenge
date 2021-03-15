@@ -1,0 +1,65 @@
+.todo {
+    width: 100%;
+    display: block;
+    background-color: $color-dark-2;
+    .todo-list {
+        padding: 15px 10px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 24px auto 24px;
+        color: $color-dark-3;
+        border-bottom: 1px solid $color-dark-3;
+        .todo-list-check {
+            grid-column: 1/2;
+            border-radius: 50%;
+            border: 1px solid $color-light-3;
+            height: 20px;
+            width: 20px;
+            align-self: center;
+            appearance: none;
+            cursor: pointer;
+        }
+        .todo-list-check:checked {
+            background-repeat: no-repeat;
+            background-position: center;
+            background: linear-gradient(135deg, rgba(58, 123, 253, 1) 0%, rgba(192, 88, 243, 1) 80%) !important;
+            &::after {
+                content: url(../assets/icon-check.svg);
+                margin-left: 4px;
+                margin-top: 1px;
+            }
+        }
+        label {
+            grid-column: 2/3;
+            padding-left: 15px;
+            width: 80%;
+            line-height: 24px;
+            align-self: center;
+            font-size: 0.8em;
+            cursor: grab;
+        }
+        button {
+            grid-column: -1/-2;
+            background: none;
+            border: none;
+            align-self: center;
+            color: $color-dark-3;
+        }
+    }
+    .todo__checked {
+        color: $color-dark-5;
+        text-decoration: line-through;
+    }
+}
+
+.todo__lightMode {
+    color: $color-light-5 !important;
+    background-color: $color-light-2 !important;
+    .todo-list {
+        color: $color-light-5 !important;
+        border-bottom: 1px solid $color-light-5 !important;
+    }
+    button {
+        color: $color-light-5 !important;
+    }
+}
